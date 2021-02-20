@@ -1,5 +1,7 @@
 # Docker push GitHub
 
+[![docker push](https://github.com/Arnab-Developer/DockerPushGitHub/actions/workflows/docker-push.yml/badge.svg)](https://github.com/Arnab-Developer/DockerPushGitHub/actions/workflows/docker-push.yml)
+
 Example .NET app to build and push Docker image with GitHub workflow.
 
 ## Solution structure
