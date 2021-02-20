@@ -4,7 +4,7 @@
     {
         string IMessageService.GetMessage()
         {
-            return "Hello World from Docker!";
+            return "Push to DockerHub with GitHub workflow.";
         }
     }
 }
