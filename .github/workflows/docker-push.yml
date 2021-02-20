@@ -32,5 +32,8 @@ jobs:
     - name: Docker build
       run: docker build -f 'src\DockerPushGitHub.ConsoleApp\Dockerfile' -t 45862391/docker-push-github:v1 .
 
+    - name: Docker login
+      run: docker login -u 45862391 -p '${{ secrets.DOCKERHUBPWD }}' 
+      
     - name: Docker push
-      run: docker login -u 45862391 -p '${{ secrets.DOCKERHUBPWD }}' docker push 45862391/docker-push-github:v1
+      run: docker push 45862391/docker-push-github:v1
