@@ -1,0 +1,36 @@
+name: pr on main
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  docker-push:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.101
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Test
+      run: dotnet test --no-build --configuration Release
+
+    - name: Publish
+      run: dotnet publish 'src\DockerPushGitHub.ConsoleApp\DockerPushGitHub.ConsoleApp.csproj' --configuration Release -o 'src\DockerPushGitHub.ConsoleApp\bin\publish'
+
+    - name: Docker build
+      run: docker build -f 'src/DockerPushGitHub.ConsoleApp/Dockerfile' -t 45862391/docker-push-github:v2 .
+
+    - name: Docker login
+      run: docker login -u 45862391 -p '${{ secrets.DOCKERHUBPWD }}'

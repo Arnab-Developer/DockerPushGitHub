@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{41BA64DC-CFD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{27845198-74C4-4BC9-A562-9936EE93F591}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerPushGitHub.ConsoleAppTest", "test\DockerPushGitHub.ConsoleAppTest\DockerPushGitHub.ConsoleAppTest.csproj", "{7CC34260-A592-46F7-86B3-A39B72A97991}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DockerPushGitHub.ConsoleAppTest", "test\DockerPushGitHub.ConsoleAppTest\DockerPushGitHub.ConsoleAppTest.csproj", "{7CC34260-A592-46F7-86B3-A39B72A97991}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{123737E0-55DD-4181-A806-512C18D6D00D}"
 	ProjectSection(SolutionItems) = preProject
@@ -17,6 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 		.github\workflows\docker-push.yml = .github\workflows\docker-push.yml
 		LICENSE = LICENSE
+		.github\workflows\pr-on-main.yml = .github\workflows\pr-on-main.yml
 		README.md = README.md
 	EndProjectSection
 EndProject
