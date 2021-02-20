@@ -28,3 +28,6 @@ jobs:
 
     - name: Publish
       run: dotnet publish 'src\DockerPushGitHub.ConsoleApp\DockerPushGitHub.ConsoleApp.csproj' --configuration Release -o 'src\DockerPushGitHub.ConsoleApp\bin\publish'
+
+    - name: Docker build
+      run: docker build -f 'src/CheckTinNotFullyMarked.BackJob/Dockerfile' -t 45862391/docker-push-github:v1 .
