@@ -1,6 +1,6 @@
 # Docker push GitHub
 
-Example .NET app to build and push docker image with GitHub workflow.
+Example .NET app to build and push Docker image with GitHub workflow.
 
 ## Solution structure
 
