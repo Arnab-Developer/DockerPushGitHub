@@ -1,0 +1,30 @@
+name: docker push
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.101
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Test
+      run: dotnet test --no-build --configuration Release
+
+    - name: Publish
+      run: dotnet publish 'src\DockerPushGitHub.ConsoleApp\DockerPushGitHub.ConsoleApp.csproj' --configuration Release -o 'src\DockerPushGitHub.ConsoleApp\bin\publish'
