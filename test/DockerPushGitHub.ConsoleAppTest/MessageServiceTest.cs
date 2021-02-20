@@ -16,7 +16,7 @@ namespace DockerPushGitHub.ConsoleAppTest
         public void CanGetMessageReturnProperMessage()
         {
             string message = _messageService.GetMessage();
-            Assert.Equal("Hello World from Docker!", message);
+            Assert.Equal("Push to DockerHub with GitHub workflow.", message);
         }
     }
 }

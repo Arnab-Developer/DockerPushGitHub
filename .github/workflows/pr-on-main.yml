@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-  docker-push:
+  build-test:
 
     runs-on: ubuntu-latest
 
