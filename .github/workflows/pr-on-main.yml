@@ -31,6 +31,3 @@ jobs:
 
     - name: Docker build
       run: docker build -f 'src/DockerPushGitHub.ConsoleApp/Dockerfile' -t 45862391/docker-push-github:v2 .
-
-    - name: Docker login
-      run: docker login -u 45862391 -p '${{ secrets.DOCKERHUBPWD }}'
