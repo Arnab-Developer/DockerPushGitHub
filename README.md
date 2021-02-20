@@ -2,6 +2,8 @@
 
 [![docker push](https://github.com/Arnab-Developer/DockerPushGitHub/actions/workflows/docker-push.yml/badge.svg)](https://github.com/Arnab-Developer/DockerPushGitHub/actions/workflows/docker-push.yml)
 
+[![pr on main](https://github.com/Arnab-Developer/DockerPushGitHub/actions/workflows/pr-on-main.yml/badge.svg)](https://github.com/Arnab-Developer/DockerPushGitHub/actions/workflows/pr-on-main.yml)
+
 Example .NET app to build and push Docker image to DockerHub with GitHub workflow.
 
 DockerHub repo:
