@@ -8,6 +8,11 @@ Example .NET app to build and push Docker image to DockerHub with GitHub workflo
 DockerHub repo:
 https://hub.docker.com/r/45862391/docker-push-github
 
+Workflow:
+
+- Pull request to main, build and test the code.
+- Push to main or merge a pull request to main, build docker image and push to dockerhub.
+
 ## Solution structure
 
 * Console app
