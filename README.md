@@ -10,8 +10,8 @@ https://hub.docker.com/r/45862391/docker-push-github
 
 Workflow:
 
-- Pull request to main, build and test the code.
-- Push to main or merge a pull request to main, build docker image and push to dockerhub.
+- When pull request to main then build and test the code.
+- When push to main or merge a pull request to main then build docker image and push to dockerhub.
 
 ## Solution structure
 
